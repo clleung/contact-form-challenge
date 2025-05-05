@@ -1,0 +1,27 @@
+/*
+Styles
+0. Global Variables
+
+1. General Styles
+
+2. Navigation Styles
+*/
+
+/* 0. Global Variables */
+
+:root {
+    --black: #130602;
+    --white: #F4F5F4;
+    --def-padding: 0.12rem;
+
+}
+/* 1. General Styles */
+
+html, body{
+    color:  var(--black);
+}
+h1, h2, h3, h4, h5, h6{
+    color:  var(--black);
+    padding: var(--def-padding);
+
+}
