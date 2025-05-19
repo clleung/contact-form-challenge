@@ -25,50 +25,56 @@
 
 </head>
 <body>
-  <header>
-    <h1>Just a Simple Contact Form</h1>
-    <p>Interested in chatting with Lisa? <br> 
-        Feel free to reach out for a coffee chat, get some burning questions answered about my work, or to share your learnings!
-    </p>
-  </header>
-  <div>
+    <header>
+        <h1>Just a Simple Contact Form</h1>
+        <!-- whitespace below will break the code; just sep into 2 <p> -->
+        <p>Interested in chatting with Lisa?</p>
+        <p>Feel free to reach out for a coffee chat, get some burning questions answered about my work, or to share your learnings!</p>
+    </header>
+    <!-- is this div necessary? no. -->
+ 
     <form action="mailto:cllisaleung@gmail.com" method="POST" enctype="text/plain">
-      <fieldset>
-        <h3>Contact Lisa Leung</h3>
-        <label for="fname">First name</label><br>
-        <input type="text" id="fname" name="fname" placeholder="Ada" required><br>
-        
-        <label for="lname">Last name</label><br>
-        <input type="text" id="lname" name="lname" placeholder="Lovelace" required><br>
-        <br>
-        <label for="email">Email</label><br>
-        <input type="email" id="email" name="email" placeholder="ada.lovelace@email.com" required><br>
-        <br>
-        <label for="phone">Enter a phone number:</label><br>
-        <input type="tel" id="phone" name="phone" placeholder="123-456-7890"
-        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
-        <small>Format: 123-45-678</small><br>
-
-        <label for="message"><h4>Message</h4></label>
-        <textarea rows="4" cols="50" name="message" form="usrform">Enter text here...
-        </textarea>
-
-        <br>
-
-        <label for="drinks"><h5>What's your favorite type of drink?</h5></label>
-        <select name="drinks" id="drinks" multiple>
-          <option value="coffee">Coffee</option>
-          <option value="tea">Tea</option>
-          <option value="opel">Milk Tea</option>
-          <option value="audi">Fruity Drinks</option>
-        </select><br><br>
-
+        <!-- add legend for fieldset -->
+            <!-- br is read out on screenreaders ; use input or list instead-->
+        <!-- multiple H1s are allow, dont have h3 => div -> h1; header -> h1 -->
+        <legend>something legend</legend>
+        <h1>Contact Lisa Leung</h1>
+        <!-- <label for="fname">First name</label><br>
+        <input type="text" id="fname" name="fname" placeholder="Ada" required><br> -->
+        <label for="fname">
+            <span>First name</span>
+            <input type="text" id="fname" name="fname" placeholder="Ada" required>
+        </label>
+        <label for="lname">
+            <span>Last name</span>
+            <input type="text" id="lname" name="lname" placeholder="Lovelace" required>
+        </label>
+        <label for="email">
+            <span>Email</span>
+            <input type="email" id="email" name="email" placeholder="ada.lovelace@email.com" required>
+        </label>
+        <label for="phone">
+            <span>Phone Number</span>
+            <p>Format: 123-456-7890</p>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        </label>
+        <label for="message">
+            <span>Message</span>
+            <textarea rows="4" cols="50" name="message" form="usrform">Enter text here...</textarea>
+        </label>
+        <!-- dont use <h5> here' HTML is strictly for construction, style in CSS -->
+        <label for="drinks">
+            <h1>What's your favorite type of drink?</h1>
+            <select name="drinks" id="drinks" multiple>
+                <option value="coffee">Coffee</option>
+                <option value="tea">Tea</option>
+                <option value="opel">Milk Tea</option>
+                <option value="audi">Fruity Drinks</option>
+            </select>
+        </label>
         <!-- <button type ="reset">Reset</button> -->
         <button type ="submit">Submit</button>
-      </fieldset>
-      <!-- <div class="g-recaptcha" data-sitekey="6LcVXC8rAAAAAOn11-vtkA-dQh0E4iGa9gAyyZ7W"></div><br> Google recaptcha element -->
+        <!-- <div class="g-recaptcha" data-sitekey="6LcVXC8rAAAAAOn11-vtkA-dQh0E4iGa9gAyyZ7W"></div><br> Google recaptcha element -->
     </form>
-  </div>
-  
   </body>
 </html>
