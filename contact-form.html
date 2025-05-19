@@ -36,8 +36,8 @@
     <form action="mailto:cllisaleung@gmail.com" method="POST" enctype="text/plain">
         <!-- add legend for fieldset -->
             <!-- br is read out on screenreaders ; use input or list instead-->
-        <!-- multiple H1s are allow, dont have h3 => div -> h1; header -> h1 -->
-        <legend>something legend</legend>
+        <!-- multiple H1s are allowed, dont have h3 => div -> h1; header -> h1 -->
+        <!-- <legend>something legend</legend> -->
         <h1>Contact Lisa Leung</h1>
         <!-- <label for="fname">First name</label><br>
         <input type="text" id="fname" name="fname" placeholder="Ada" required><br> -->
@@ -55,7 +55,7 @@
         </label>
         <label for="phone">
             <span>Phone Number</span>
-            <p>Format: 123-456-7890</p>
+            <!-- <p>Format: 123-456-7890</p> -->
             <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
         </label>
         <label for="message">
@@ -64,7 +64,7 @@
         </label>
         <!-- dont use <h5> here' HTML is strictly for construction, style in CSS -->
         <label for="drinks">
-            <h1>What's your favorite type of drink?</h1>
+            <h1>Bonus Question: What's your favorite type of drink?</h1>
             <select name="drinks" id="drinks" multiple>
                 <option value="coffee">Coffee</option>
                 <option value="tea">Tea</option>
@@ -73,7 +73,7 @@
             </select>
         </label>
         <!-- <button type ="reset">Reset</button> -->
-        <button type ="submit">Submit</button>
+        <button type ="submit" class="submit-button">Submit</button>
         <!-- <div class="g-recaptcha" data-sitekey="6LcVXC8rAAAAAOn11-vtkA-dQh0E4iGa9gAyyZ7W"></div><br> Google recaptcha element -->
     </form>
   </body>
